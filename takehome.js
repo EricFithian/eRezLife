@@ -50,6 +50,7 @@ Question 3: recursive function with array
 */
 
 const recrusiveFunc = (arr, count = -1) => {
+    if(!arr.length) return ''
     count++;
     if(arr.length === 1) return `${`    `.repeat(count)}<${arr[0]}>
 ${`    `.repeat(count)}</${arr[0]}>
