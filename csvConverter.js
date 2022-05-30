@@ -30,7 +30,9 @@ uploadConfirm.addEventListener('click', () => {
         skipEmptyLines: true,
         complete: function(results) {
             console.log(results.data);
+            printOut.innerHTML = ''
             results.data.forEach((result, idx) => {
+                printOut.innerHTML = '';
                 printOut.innerHTML = `${printOut.innerHTML} ${idx} - ${checkResults(result)}<hr>`;
             })
         }
